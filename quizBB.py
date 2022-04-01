@@ -8,13 +8,12 @@ class BMI(Resource):
         dataBerat = float(request.form['berat'])
         dataTinggi = float(request.form['tinggi'])
 
-        BMI = dataBerat/(dataTinggi/100)**2
+        BMI = dataBerat/(dataTinggi/100)
         
         if BMI <18.5:            
-            keterangan = "Kurus"
-            
+            keterangan = "Kurus"          
         elif BMI>18.5 and BMI<25 :
-            keterangan = "Nomral"
+            keterangan = "Normal"
         elif BMI>25 and BMI<40:
             keterangan = "Berlebih"
         else:
